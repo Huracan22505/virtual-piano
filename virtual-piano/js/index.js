@@ -30,7 +30,7 @@ piano.addEventListener("mousedown", (e) => {
 
   if (e.target.dataset.note) {
     const note = e.target.dataset.note;
-    const src = `../assets/audio/${note}.mp3`;
+    const src = `./assets/audio/${note}.mp3`;
     playAudio(src);
   }
 
@@ -58,7 +58,7 @@ function onMouseOver(e) {
     e.target.classList.add("piano-key-active");
 
     const note = e.target.dataset.note;
-    const src = `../assets/audio/${note}.mp3`;
+    const src = `./assets/audio/${note}.mp3`;
     playAudio(src);
   }
 }
@@ -67,7 +67,7 @@ window.addEventListener("keydown", (event) => {
   if (event.repeat) return;
 
   if (event.code === "KeyD") {
-    const src = `../assets/audio/c.mp3`;
+    const src = `./assets/audio/c.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "D")
@@ -75,7 +75,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (event.code === "KeyF") {
-    const src = `../assets/audio/d.mp3`;
+    const src = `./assets/audio/d.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "F")
@@ -83,7 +83,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (event.code === "KeyG") {
-    const src = `../assets/audio/e.mp3`;
+    const src = `./assets/audio/e.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "G")
@@ -91,7 +91,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (event.code === "KeyH") {
-    const src = `../assets/audio/f.mp3`;
+    const src = `./assets/audio/f.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "H")
@@ -99,7 +99,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (event.code === "KeyJ") {
-    const src = `../assets/audio/g.mp3`;
+    const src = `./assets/audio/g.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "J")
@@ -107,7 +107,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (event.code === "KeyK") {
-    const src = `../assets/audio/a.mp3`;
+    const src = `./assets/audio/a.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "K")
@@ -115,7 +115,7 @@ window.addEventListener("keydown", (event) => {
   }
 
   if (event.code === "KeyL") {
-    const src = `../assets/audio/b.mp3`;
+    const src = `./assets/audio/b.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "L")
@@ -125,35 +125,35 @@ window.addEventListener("keydown", (event) => {
   // sharps
 
   if (event.code === "KeyR") {
-    const src = `../assets/audio/c♯.mp3`;
+    const src = `./assets/audio/c♯.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "R")
       .classList.add(`piano-key-active`);
   }
   if (event.code === "KeyT") {
-    const src = `../assets/audio/d♯.mp3`;
+    const src = `./assets/audio/d♯.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "T")
       .classList.add("piano-key-active");
   }
   if (event.code === "KeyU") {
-    const src = `../assets/audio/f♯.mp3`;
+    const src = `./assets/audio/f♯.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "U")
       .classList.add("piano-key-active");
   }
   if (event.code === "KeyI") {
-    const src = `../assets/audio/g♯.mp3`;
+    const src = `./assets/audio/g♯.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "I")
       .classList.add("piano-key-active");
   }
   if (event.code === "KeyO") {
-    const src = `../assets/audio/a♯.mp3`;
+    const src = `./assets/audio/a♯.mp3`;
     playAudio(src);
     [...pianoКeys]
       .find((el) => el.dataset.letter === "O")
