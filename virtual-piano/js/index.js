@@ -4,24 +4,24 @@ const lettersBtn = document.querySelector(".btn-letters");
 const notesBtn = document.querySelector(".btn-notes");
 const fullscreenBtn = document.querySelector(".fullscreen");
 
-// fullscreenBtn.addEventListener("click", () => {
-//   const app = document.documentElement;
+fullscreenBtn.addEventListener("click", () => {
+  const app = document.documentElement;
 
-//   app.requestFullscreen();
-//   document.exitFullscreen();
-// });
+  app.requestFullscreen();
+  document.exitFullscreen();
+});
 
-// lettersBtn.addEventListener("click", (e) => {
-//   [...pianoКeys].map((el) => el.classList.add("piano-key-letter"));
-//   e.target.classList.add("btn-active");
-//   notesBtn.classList.remove("btn-active");
-// });
+lettersBtn.addEventListener("click", (e) => {
+  [...pianoКeys].map((el) => el.classList.add("piano-key-letter"));
+  e.target.classList.add("btn-active");
+  notesBtn.classList.remove("btn-active");
+});
 
-// notesBtn.addEventListener("click", (e) => {
-//   [...pianoКeys].map((el) => el.classList.remove("piano-key-letter"));
-//   e.target.classList.add("btn-active");
-//   lettersBtn.classList.remove("btn-active");
-// });
+notesBtn.addEventListener("click", (e) => {
+  [...pianoКeys].map((el) => el.classList.remove("piano-key-letter"));
+  e.target.classList.add("btn-active");
+  lettersBtn.classList.remove("btn-active");
+});
 
 // piano.addEventListener("mousedown", (e) => {
 //   if (e.target.classList.contains("piano-key")) {
