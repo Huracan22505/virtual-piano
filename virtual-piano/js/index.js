@@ -23,45 +23,45 @@ notesBtn.addEventListener("click", (e) => {
   lettersBtn.classList.remove("btn-active");
 });
 
-// piano.addEventListener("mousedown", (e) => {
-//   if (e.target.classList.contains("piano-key")) {
-//     e.target.classList.add("piano-key-active");
-//   }
+piano.addEventListener("mousedown", (e) => {
+  if (e.target.classList.contains("piano-key")) {
+    e.target.classList.add("piano-key-active");
+  }
 
-//   if (e.target.dataset.note) {
-//     const note = e.target.dataset.note;
-//     const src = `../assets/audio/${note}.mp3`;
-//     playAudio(src);
-//   }
+  if (e.target.dataset.note) {
+    const note = e.target.dataset.note;
+    const src = `../assets/audio/${note}.mp3`;
+    playAudio(src);
+  }
 
-//   piano.addEventListener("mouseover", onMouseOver);
+  piano.addEventListener("mouseover", onMouseOver);
 
-//   window.addEventListener("mouseup", () => {
-//     piano.removeEventListener("mouseover", onMouseOver);
+  window.addEventListener("mouseup", () => {
+    piano.removeEventListener("mouseover", onMouseOver);
 
-//     pianoКeys.forEach((el) => {
-//       if (el.classList.contains("piano-key-active")) {
-//         el.classList.remove("piano-key-active");
-//       }
-//     });
-//   });
-// });
+    pianoКeys.forEach((el) => {
+      if (el.classList.contains("piano-key-active")) {
+        el.classList.remove("piano-key-active");
+      }
+    });
+  });
+});
 
-// function onMouseOver(e) {
-//   if (e.target.classList.contains("piano-key")) {
-//     pianoКeys.forEach((el) => {
-//       if (el.classList.contains("piano-key-active")) {
-//         el.classList.remove("piano-key-active");
-//       }
-//     });
+function onMouseOver(e) {
+  if (e.target.classList.contains("piano-key")) {
+    pianoКeys.forEach((el) => {
+      if (el.classList.contains("piano-key-active")) {
+        el.classList.remove("piano-key-active");
+      }
+    });
 
-//     e.target.classList.add("piano-key-active");
+    e.target.classList.add("piano-key-active");
 
-//     const note = e.target.dataset.note;
-//     const src = `../assets/audio/${note}.mp3`;
-//     playAudio(src);
-//   }
-// }
+    const note = e.target.dataset.note;
+    const src = `../assets/audio/${note}.mp3`;
+    playAudio(src);
+  }
+}
 
 // window.addEventListener("keydown", (event) => {
 //   if (event.repeat) return;
