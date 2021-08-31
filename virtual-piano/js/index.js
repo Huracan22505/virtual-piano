@@ -67,12 +67,6 @@ window.addEventListener("keydown", (event) => {
   if (event.repeat) return;
 
   const { code } = event;
-  console.log(
-    "🚀 ~ file: index.js ~ line 70 ~ window.addEventListener ~ code",
-    code
-  );
-  const note = event.currentTarget;
-  console.log(note);
 
   if (code === "KeyD") {
     const src = `./assets/audio/c.mp3`;
@@ -167,10 +161,16 @@ window.addEventListener("keydown", (event) => {
       .find((el) => el.dataset.letter === "O")
       .classList.add("piano-key-active");
   }
-});
 
-window.addEventListener("keyup", () => {
-  [...pianoKeys].map((el) => el.classList.remove("piano-key-active"));
+  console.log(event);
+
+  window.addEventListener(
+    "keyup",
+    () => {
+      [...pianoKeys].map((el) => el.classList.remove("piano-key-active"));
+    },
+    { once: true }
+  );
 });
 
 function playAudio(src) {
