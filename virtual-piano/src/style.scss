@@ -1,3 +1,100 @@
+body {
+  min-height: 100vh;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(14, 13, 13);
+
+  background-color: rgb(130, 220, 231);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  overflow-x: hidden;
+
+  @media screen and (max-width: 767px) {
+    overflow-x: visible;
+  }
+}
+
+.notScrollable {
+  overflow: hidden;
+}
+
+.noPointerEvents {
+  pointer-events: none;
+  cursor: none;
+}
+
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden;
+}
+
+ul,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1440px;
+  padding-left: 216px;
+  padding-right: 216px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1439px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+
+    width: 1200px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    width: 768px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: 320px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -16,7 +113,7 @@ html {
 body {
   min-height: 100vh;
   background-color: #313940;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   background: #313940;
   overflow-x: hidden;
 }
@@ -63,7 +160,7 @@ body {
   background-color: #454c53;
   border: 0;
   border-radius: 2px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #fff;
@@ -225,7 +322,7 @@ body {
   background-size: contain;
   transition: 0.3s;
   cursor: pointer;
-  background-image: url("assets/svg/fullscreen-open.svg");
+  background-image: url('./assets/svg/fullscreen-open.svg');
 }
 
 .fullscreen:hover {
@@ -233,7 +330,7 @@ body {
 }
 
 :-webkit-full-screen .fullscreen {
-  background-image: url("assets/svg/fullscreen-exit.svg");
+  background-image: url('./assets/svg/fullscreen-exit.svg');
 }
 
 @media (max-width: 768px) {
